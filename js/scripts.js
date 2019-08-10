@@ -91,7 +91,7 @@ function draw() {
 
 setInterval(draw, 100);
 
-var images = ['trivial.png', 'black.jpg', 'impala.jpg'];
+var images = ['trivial.png', 'wera.png', 'black.png'];
 var imageBorders = ['border-color-coral', 'border-color-green', 'border-color-blue']
 
 function switchMe() {

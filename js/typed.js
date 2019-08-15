@@ -95,7 +95,7 @@
             r && r.reset(), i.data('typed', r = new s(this, o)), 'string' == typeof e && r[e]()
         })
     }, (((t || {}).fn || {}).typed || {}).defaults = {
-        strings: ['Danstan Onyango aka Zemuldo, Software Engineer'],
+        strings: ['Lewis Orenge aka @chief, Software Engineer'],
         stringsElement: null,
         typeSpeed: 60,
         startDelay: 0,

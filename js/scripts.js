@@ -25,7 +25,7 @@ function typeOnTerminal() {
 
     var waitAndBreak = '^700 <br/>';
     var start = '<span class="margin-left--10 color-blue font-size-14 !important">➜:~</span>';
-    var myStack = start + whiten('Skill Set?') + waitAndBreak + ['Angular/Typescript', 'Django/Python', 'MySQL', 'Postgres','Kotlin', 'Java', 'Retrofit', 'ReST API', 'Shell Scripting', 'HTML5/Bootstrap/CSS Ninja'].join(',^500 ');
+    var myStack = start + whiten('Skill Set?') + waitAndBreak + ['Kotlin', 'Java', 'Retrofit', 'ReST API', 'Angular/Typescript', 'Django/Python', 'MySQL', 'Postgres', 'Shell Scripting', 'HTML5/Bootstrap/CSS Ninja'].join(',^500 ');
     var experience = getYearsBetween(new Date("February 1 2018 00:00"));
     var yearsOfExperience = waitAndBreak + start + whiten('Experience?') + waitAndBreak + experience;
     var funGames = ['Travelling,' + ' Music and ' + 'Dancing'].join('^500, ');

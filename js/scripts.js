@@ -25,12 +25,12 @@ function typeOnTerminal() {
 
     var waitAndBreak = '^700 <br/>';
     var start = '<span class="margin-left--10 color-blue font-size-14 !important">➜:~</span>';
-    var myStack = start + whiten('Skill Set?') + waitAndBreak + ['Flutter', 'Angular/Typescript', 'Django/Python', 'ReST API',  'MySQL', 'Postgres', 'Shell Scripting', 'HTML5/Bootstrap/CSS'].join(',^500 ');
-    var experience = getYearsBetween(new Date("February 1 2021 00:00"));
+    var myStack = start + whiten('Skill Set?') + waitAndBreak + ['AWS Cloud', 'Kubernetes', 'DevOps', 'Python/Django',  'Angular/Typescript', 'Shell Scripting', 'Postgres,Mysql'].join(',^500 ');
+    var experience = getYearsBetween(new Date("February 1 2022 00:00"));
     var yearsOfExperience = waitAndBreak + start + whiten('Experience?') + waitAndBreak + experience;
     var funGames = ['Travelling,' + ' Music and ' + 'Dancing'].join('^500, ');
     var currentStatus = waitAndBreak + start + whiten('My Fun time?') + waitAndBreak + funGames;
-    var coolStuff = ['I volunteer to tutor orphans and also like telling stories to friends and collegues.'];
+    var coolStuff = ['I drink beer an play pool.'];
     var someOtherCoolStuffICanDo = waitAndBreak + start + whiten('Any cool stuff I can do?') + waitAndBreak + coolStuff;
     $('.typed').typed({
         strings: [myStack + yearsOfExperience + currentStatus],

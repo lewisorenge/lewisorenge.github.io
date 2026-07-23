@@ -365,6 +365,94 @@ li {
     color: rgba(255, 255, 255, 0.4);
 }
 
+/* ——— Projects ——— */
+.projects {
+    background: var(--white);
+    border-top: 1px solid var(--line);
+}
+
+.project-list {
+    display: grid;
+    gap: 0;
+    margin-top: 3rem;
+}
+
+.project {
+    padding: 2rem 0;
+    border-top: 1px solid var(--line);
+    transition: border-color 0.3s var(--ease);
+}
+
+.project:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.project:hover {
+    border-top-color: var(--accent);
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+    margin-bottom: 0.7rem;
+}
+
+.project-index {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+}
+
+.project-stack {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+}
+
+.project h3 {
+    margin: 0 0 0.65rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.5vw, 1.55rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.project h3 a {
+    color: var(--ink);
+}
+
+.project h3 a:hover {
+    color: var(--accent);
+}
+
+.project p {
+    margin: 0;
+    max-width: 40rem;
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    font-weight: 500;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--accent-deep);
+    border-bottom: 1px solid rgba(255, 77, 28, 0.35);
+}
+
+.project-link:hover {
+    color: var(--ink);
+    border-bottom-color: var(--ink);
+}
+
 /* ——— About ——— */
 .about {
     background: var(--white);

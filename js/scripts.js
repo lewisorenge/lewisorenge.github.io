@@ -1,60 +1,49 @@
-/* Typed.js */
-
 function whiten(string) {
-    return '<span style="color: white;">' + string + '</span>'
-}
-
-function getYearsBetween(sdt) {
-    var date_difference = new Date(new Date() - sdt);
-    var years = date_difference.toISOString().slice(0, 4) - 1970;
-    var months = function (months) {
-        if (months == 0) return '';
-        if (months > 11) {
-            years += 1;
-            return '';
-        }
-        if (months == 1) {
-            return ' and ' + months + ' Month';
-        }
-        return ' and ' + months + ' Months';
-    };
-    return years + ' Years' + months(date_difference.getMonth() + 1);
+    return '<span style="color: #f0f4f8;">' + string + '</span>';
 }
 
 function typeOnTerminal() {
+    var waitAndBreak = '^600 <br/>';
+    var start = '<span class="prompt">➜</span>';
+    var myStack =
+        start +
+        whiten('Skill set?') +
+        waitAndBreak +
+        [
+            'Laravel',
+            'Vue.js',
+            'PHP',
+            'JavaScript',
+            'AWS Cloud',
+            'Docker',
+            'CI/CD',
+            'MySQL / Postgres',
+            'REST APIs',
+            'DevOps'
+        ].join(',^400 ');
 
-    var waitAndBreak = '^700 <br/>';
-    var start = '<span class="margin-left--10 color-blue font-size-14 !important">➜:~</span>';
-    var myStack = start + whiten('Skill Set?') + waitAndBreak + ['AWS Cloud', 'AWS Security', 'SIEM', 'IAM', 'Compliance', 'Kubernetes', 'DevOps', 'Python/Django', 'Shell Scripting', 'Postgres,Mysql'].join(',^500 ');
-    var experience = getYearsBetween(new Date("February 1 2020 00:00"));
-    var yearsOfExperience = waitAndBreak + start + whiten('Experience?') + waitAndBreak + experience;
-    var funGames = ['Travelling,' + ' Music and ' + 'Dancing'].join('^500, ');
-    var currentStatus = waitAndBreak + start + whiten('My Fun time?') + waitAndBreak + funGames;
-    var coolStuff = ['I drink beer an play pool.'];
-    var someOtherCoolStuffICanDo = waitAndBreak + start + whiten('Any cool stuff I can do?') + waitAndBreak + coolStuff;
-    $('.typed').typed({
-        strings: [myStack + yearsOfExperience + currentStatus],
+    var yearsOfExperience =
+        waitAndBreak + start + whiten('Experience?') + waitAndBreak + '7 years 8 months';
 
+    var focus =
+        waitAndBreak +
+        start +
+        whiten('Focus?') +
+        waitAndBreak +
+        'Full Stack Software Engineer — Laravel, Vue.js, Cloud.';
+
+    if (typeof jQuery === 'undefined' || !jQuery.fn.typed) {
+        return;
+    }
+
+    jQuery('.typed').typed({
+        strings: [myStack + yearsOfExperience + focus],
+        typeSpeed: 28,
+        backDelay: 1200,
+        showCursor: true,
+        cursorChar: '▋'
     });
 }
 
-
-setInterval(draw, 100);
-
-var images = ['trivial.png', 'wera.png', 'black.png'];
-var imageBorders = ['border-color-coral', 'border-color-green', 'border-color-blue']
-
-function switchMe() {
-    document.getElementById('me-pic').src = '/images/logo/' + images[Math.floor(Math.random() * images.length)];
-    var e = document.getElementById('me-pic-wrapper');
-    var newClassName = imageBorders[Math.floor(Math.random() * imageBorders.length)];
-    var list = e.className.split(' ').filter(function(className){
-        return !className.match('border-color');
-    });
-    list.push(newClassName);
-    e.className = list.join(' ');
-}
-
-setInterval(function () {
-    switchMe();
-}, 8000);
+document.getElementById('year') &&
+    (document.getElementById('year').textContent = new Date().getFullYear());

@@ -1,40 +1,35 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500);
-
 .text-editor-wrap {
-    margin: auto;
     display: block;
-    max-width: 700px;
-    min-height: 244px;
-    border-radius: 10px;
-    clear: both;
+    width: 100%;
+    min-height: 170px;
     overflow: hidden;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    -ms-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-    transition: all .5s ease-out
 }
 
 .text-body {
-    height: auto;
-    background-color: rgba(0, 0, 0, .85);
-    padding: 10px;
-    color: #f0f0f0;
-    text-shadow: #000 0 1px 0;
-    font-family: Consolas, "Courier New", Courier;
-    font-size: 1em;
-    line-height: 1.4em;
-    font-weight: 500;
+    min-height: 170px;
+    padding: 1.2rem 1.3rem 1.5rem;
+    color: #d5dde8;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    font-weight: 400;
     text-align: left;
     overflow: hidden;
-    -webkit-transition: all .5s ease-out;
-    -moz-transition: all .5s ease-out;
-    -ms-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-    transition: all .5s ease-out
 }
 
 .typed {
-    color: green
+    color: #7dffa8;
 }
 
+.typed .prompt {
+    color: #ff8f66;
+    margin-right: 0.4rem;
+}
+
+@media (max-width: 600px) {
+    .text-body {
+        font-size: 0.8rem;
+        padding: 1rem;
+        min-height: 190px;
+    }
+}
